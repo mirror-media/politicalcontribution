@@ -1,0 +1,51 @@
+flex(direction, justify-content, align-items)
+  display flex
+  flex-direction direction
+  justify-content justify-content
+  align-items align-items
+
+getPartyColorScheme(partyName, type)
+  $dppColorDark = #53a66f
+  $dppColorLight = #dbed9a
+  $kmtColorDark = #0071bc
+  $kmtColorLight = #a8dbef
+  $nppColorDark = #fcc037
+  $nppColorLight = #f7e5a9
+  $npsuColorDark = #c7195c
+  $npsuColorLight = #e0bfd0
+  $indieColorDark = #736357
+  $indieColorLight = #c7b299
+  if type == 'dark'
+    if partyName == 'dpp'
+      return $dppColorDark
+    if partyName == 'kmt'
+      return $kmtColorDark
+    if partyName == 'npp'
+      return $nppColorDark
+    if partyName == 'npsu'
+      return $npsuColorDark
+    if partyName == 'indie'
+      return $indieColorDark
+  else if type == 'light'
+    if partyName == 'dpp'
+      return $dppColorLight
+    if partyName == 'kmt'
+      return $kmtColorLight
+    if partyName == 'npp'
+      return $nppColorLight
+    if partyName == 'npsu'
+      return $npsuColorLight
+    if partyName == 'indie'
+      return $indieColorLight
+
+setPartyColorScheme(property, type)
+  &.dpp
+    { property } getPartyColorScheme('dpp', type)
+  &.kmt
+    { property } getPartyColorScheme('kmt', type)
+  &.npp
+    { property } getPartyColorScheme('npp', type)
+  &.npsu
+    { property } getPartyColorScheme('npsu', type)
+  &.indie
+    { property } getPartyColorScheme('indie', type)

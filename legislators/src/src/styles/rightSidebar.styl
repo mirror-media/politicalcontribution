@@ -1,0 +1,23 @@
+#app
+  &.pushable:not(body)
+    transform none !important
+  #comment-hamburger-sidebar
+    width 30% !important
+    height 100vh !important
+    position fixed !important
+    top 0 !important
+    padding 20px
+    box-sizing border-box
+    .nav-mobile
+      display none
+
+@media (max-width: 767px)
+  #app
+    #comment-hamburger-sidebar
+      width 70% !important
+      padding 0
+      border none
+      .fb-comments
+        display none
+      .nav-mobile
+        display flex
