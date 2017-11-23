@@ -8,6 +8,7 @@
     <router-link class="nav-router-link" id="story3" to="/story3" @click.native="scroll('story3')" onclick="ga('send', 'event', 'projects', 'click', 'side to article', { nonInteraction: false })"><span class="tooltiptext">企業篇／金權遊戲？翻開金主的投資名冊</span></router-link>
     <router-link class="nav-router-link" id="story4" to="/story4" @click.native="scroll('story4')" onclick="ga('send', 'event', 'projects', 'click', 'side to article', { nonInteraction: false })"><span class="tooltiptext">政治獻金開放了嗎？</span></router-link>
     <a id="paper" href="https://github.com/mirror-media/politicalcontribution" target="_blank" onclick="ga('send', 'event', 'projects', 'click', 'side to data', { nonInteraction: false })"><span class="tooltiptext">原始素材資料</span></a>
+    <a id="related" @click="toggleRelated"><span class="tooltiptext" onclick="ga('send', 'event', 'projects', 'click', 'side to related', { nonInteraction: false })">查看相關討論</span></a>
     <!-- <a class="nav-router-link subscribe" id="notice" to="/notice" @click="toggleSubscribe"></a> -->
   </aside>
 </template>
@@ -17,6 +18,9 @@ export default {
   methods: {
     toggleSubscribe () {
       this.$emit('toggleSubscribe')
+    },
+    toggleRelated () {
+      this.$emit('toggleRelated')
     },
     scroll (to) {
       if (this.$route.name === to) {
@@ -84,6 +88,10 @@ landing-gradient = linear-gradient(to bottom, rgba(43,65,85,1) 0%, rgba(105,121,
       .tooltiptext
         visibility visible
         opacity 1
+    &#related
+      background-image url('~assets/images/page-nav/related-white.png')
+      &:hover
+        background-image url('~assets/images/page-nav/related-blue.png')
     .tooltiptext
       visibility hidden
       width 120px

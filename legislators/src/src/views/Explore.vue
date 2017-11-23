@@ -8,9 +8,7 @@
     <template v-if="dataFetchingComplete">
       <List :abstractData="abstractData" @clickCandidate="clickCandidate" @sortList="sortList"></List>
       <div id="modal" class="ui fullscreen modal">
-        <!-- <router-link to="/explore"> -->
-          <img class="close-modal-button" src="~assets/images/x.png" alt="" @click="closeModal">
-        <!-- </router-link> -->
+        <img class="close-modal-button" src="~assets/images/x.png" alt="" @click="closeModal">
         <div class="scrolling content">
           <Modal :abstractData="abstractData" :detailData="detailData" :clickedCandidateName="clickedCandidateName"></Modal>
         </div>

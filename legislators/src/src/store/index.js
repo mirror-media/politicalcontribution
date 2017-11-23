@@ -20,7 +20,8 @@ const store = new Vuex.Store({
     abstractData: [],
     detailData: [],
     storyPublishedCount: 4,
-    landingForceCandidateName: '陳歐珀'
+    landingForceCandidateName: '陳歐珀',
+    isRelatedModalShow: false
   },
   mutations: {
     SET_LANDING_DATA (state, data) {
@@ -31,6 +32,12 @@ const store = new Vuex.Store({
     },
     SET_DETAIL_DATA (state, data) {
       Vue.set(state, 'detailData', data)
+    },
+    OPEN_RELATED_MODAL (state) {
+      Vue.set(state, 'isRelatedModalShow', true)
+    },
+    CLOSE_RELATED_MODAL (state) {
+      Vue.set(state, 'isRelatedModalShow', false)
     }
   },
   actions: {
