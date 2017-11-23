@@ -28,6 +28,9 @@
       <a class="nav-router-link" href="https://github.com/mirror-media/politicalcontribution" target="_blank" onclick="ga('send', 'event', 'projects', 'click', 'drawer to data', { nonInteraction: false })">
         <img src="~assets/images/landing-nav/paper.png" alt="原始素材資料"><h2>原始素材資料</h2>
       </a>
+      <a class="nav-router-link" @click="openRelatedModal()" target="_blank" onclick="ga('send', 'event', 'projects', 'click', 'drawer to related', { nonInteraction: false })">
+        <img src="~assets/images/landing-nav/related-mobile.png" alt="查看相關討論"><h2>查看相關討論</h2>
+      </a>
     </div>
   </div>
 </template>
@@ -48,6 +51,10 @@ export default {
       /* eslint-disable no-undef */
       ga('send', 'event', 'projects', 'click', 'drawer to subscription', { nonInteraction: false })
       this.$emit('toggleSubscribe')
+    },
+    openRelatedModal () {
+      this.$store.commit('OPEN_RELATED_MODAL')
+      $('#comment-hamburger-sidebar').sidebar('hide')
     }
   }
 }
