@@ -5,6 +5,7 @@
       <div class="credit-container">
         <p class="credit">文：李又如 設計：陳怡蒨</p>
         <p class="credit">網站製作：熊凱文 資料整理：李又如、熊凱文</p>
+        <p class="credit credit--date">發布日期：2017/11/9</p>
       </div>
     </header>
     <article>
