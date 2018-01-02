@@ -24,6 +24,9 @@
           </router-link> -->
         </nav>
       </router-link>
+      <a href="https://campaign-finance.g0v.ctiml.tw/" target="_blank" onclick="ga('send', 'event', 'projects', 'click', 'master to event2.0', { nonInteraction: false })">
+        <img src="~assets/images/landing-nav/revolution.png" alt="鍵盤救國一起來"><h2>鍵盤救國<br>一起來</h2>
+      </a>
       <a href="https://github.com/mirror-media/politicalcontribution" target="_blank" onclick="ga('send', 'event', 'projects', 'click', 'master to data', { nonInteraction: false })">
         <img src="~assets/images/landing-nav/paper.png" alt="原始素材資料"><h2>原始素材資料</h2>
       </a>
@@ -102,8 +105,14 @@ nav
       text-decoration none
       background-color #152538
       box-shadow 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19)
+      &[href="https://campaign-finance.g0v.ctiml.tw/"]
+        background-color #F5A623
+        color black
       img
         @extends $sectionIconDimensions
+        &[alt="鍵盤救國一起來"]
+          width calc(1.17em * 4)
+          height calc(1.17em * 4)
       h2
         @extends $reset-h2-style
       &:hover
@@ -153,6 +162,9 @@ nav
         img
           width 22px
           height 22px
+          &[alt="鍵盤救國一起來"]
+            width calc(1.17em * 2)
+            height calc(1.17em * 2)
       .story
         flex(column, center, center)
 @media (max-width: 413px)
