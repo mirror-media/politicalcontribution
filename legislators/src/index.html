@@ -54,9 +54,9 @@
     <!-- built files will be auto injected -->
     <script>
       function showMailingPopUp () {
+        document.cookie = 'MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+        document.cookie = 'MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
         require(['mojo/signup-forms/Loader'], function (L) { L.start({'baseUrl': 'mc.us16.list-manage.com', 'uuid': '002001a5d800cf9229a38672f', 'lid': 'c7d8c6c5b8'}) })
-        document.cookie = 'MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC'
-        document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;'
       }
     </script>
   </body>
